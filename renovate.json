@@ -1,0 +1,20 @@
+{
+  "extends": [
+    "config:base",
+    "group:all",
+    "schedule:daily",
+    ":semanticCommitScopeDisabled"
+  ],
+  "packageRules": [
+    {
+      "automerge": false,
+      "matchUpdateTypes": ["minor", "patch"]
+    }
+  ],
+  "ignoreDeps": ["marked"],
+  "separateMajorMinor": true,
+  "separateMultipleMajor": true,
+  "commitMessageAction": "Pin",
+  "timezone": "Europe/Paris",
+  "schedule": ["before 9am on Monday"]
+}

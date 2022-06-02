@@ -1,0 +1,15 @@
+{
+    "repositoryUrl": "https://github.com/genario-ai/walterjs.git",
+    "npmPublish": false,
+    "debug": false,
+    "plugins": [
+        ["@semantic-release/commit-analyzer", {
+          "preset": "angular",
+          "releaseRules": [
+            {"type": "refactor", "release": "patch"},
+            {"type": "revert", "release": "patch"}
+          ]
+        }],
+        "@semantic-release/release-notes-generator"
+      ]
+}
